@@ -25,6 +25,7 @@
   "author": "Adegbokan Paul",
   "license": "ISC",
   "dependencies": {
+    "@craco/craco": "^6.2.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -42,7 +43,12 @@
     "normalize": "^0.3.1",
     "normalize-url": "^4.5.1",
     "pug": "^3.0.2",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
     "validator": "^13.6.0",
     "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.9"
   }
 }

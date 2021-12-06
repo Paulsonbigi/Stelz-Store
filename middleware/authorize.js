@@ -5,10 +5,10 @@ exports.authorize = async (req, res, next) => {
     try{
         let token;
         if(req.headers.Authorization && req.headers.Authorization.startsWith("Bearer")){
-            token = headers.Authorization.split(" ")[1];
-          } else if(req.cookies.token) {
-              token = req.cookies.token;
-          }
+            token = req.headers.Authorization.split(" ")[1];
+        } else if(req.cookies.token) {
+            token = req.cookies.token;
+        }
 
         if(!token){
             return res.status(401).json({ success: false, msg: "You are not authorized. Login in to perform this operation"})

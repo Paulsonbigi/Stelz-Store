@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const { Schema } = mongoose
-const validator = require("validator")
+const validator = require("bcryptjs")
 const slug = require('mongoose-slug-generator')
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     },
     phoneNumber: {
         type: String, 
-        required: [true, 'Phone nuber field is required']
+        required: [true, 'Phone number field is required']
     },
     rating: {
         type: Number,
